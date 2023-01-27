@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=PT + Sans');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT-Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#007bb2, #22050a);
+}
+
+.card {
+    position: relative;
+    width: 320px;
+    height: 450px;
+    
+    border-radius: 19px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.card .poster {
+    position: relative;
+    overflow: hidden;
+}
+
+.card .poster::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: -100px;
+    height: 100%;
+    background: linear-gradient(0deg, #1934ac 50%, transparent);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.card:hover .poster::before {
+    bottom: 0px;
+}
+
+.card .poster img {
+    width: 100%;
+    transition: 0.5s;
+
+}
+.card:hover .poster img{
+    transform: translateY(-150px);
+    filter: blur(5px);
+}
+
+.card .details{
+    position: absolute;
+    width: 100%;
+    bottom:-145px;
+    left: 0;
+    padding: 20px;
+    z-index: 2;
+    transition: 0.5s;
+}
+.card:hover .details{
+    bottom: 0px;
+
+}
+.card .details .logo
+{
+    max-width: 190px;
+}
+.card .details h3
+{
+    color: #fff;
+    font-size: 14px;
+}
+.card .details .release{
+    color: #fff;
+}
+.card .details .release span{
+    color: #f7f406;
+    font-weight: 600;
+}
+.card .details .tags{
+    position: relative;
+    margin-top: 5px;
+}
+.card .details .tags span{
+    padding: 3px 6px ;
+    color: #fff;
+    background: #03a8f5;
+    border-radius: 6px;
+}
+.card .details .tags span:nth-child(2){
+    background: #ff5722;
+}
+.card .details .info{
+    color: #fff;
+    margin-top: 20px;
+}
+.card .details .cast{
+    position: relative;
+}
+.card .details .cast h4{
+    color: #fff;
+    margin-top: 9px;
+}
+.card .details ul
+{
+    position: relative;
+    display: flex;
+    gap: 13px;
+    margin-top: 9px;
+}
+.card .details ul li{
+    list-style: none;
+    width: 36px;
+    height: 36px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+.card .details ul li img{
+    max-width: 100%;
+}
+footer{
+position: relative;
+}
+footer p{
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    margin-left: -250px ;
+    margin-top: -50px;
+    
+}
